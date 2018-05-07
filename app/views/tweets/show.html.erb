@@ -1,0 +1,18 @@
+<h1>アンケート結果<h1>
+
+<% @tweet.each do |tweet|%>
+<p><%= tweet.number %>
+<%= tweet.username %>
+<%= tweet.question1 %>
+<%= tweet.question2 %>
+<%= tweet.question3 %>
+<%= tweet.question4 %>
+<%= tweet.question5 %>
+<%= tweet.question6 %>
+<%= tweet.question7 %>
+<%= tweet.question8 %>
+<%= tweet.question9 %>
+<%= tweet.qustion10 %>
+<%= tweet.result%></p>
+
+<%end%>

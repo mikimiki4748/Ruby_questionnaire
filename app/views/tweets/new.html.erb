@@ -1,0 +1,76 @@
+<%= form_for Tweet.new do |f| %>
+	<%= f.label :username %>
+	<%= f.text_field :username %>
+	<br>
+	<%= f.label :number %>
+	<%= f.text_field :number %>
+	<br>
+	<p>1-そうではない<p>
+	<p>2-どちらかというとそうではない<p>
+	<p>3-どちらともいえない<p>
+	<p>4-どちらかというとそうである<p>
+	<p>5-そうである<p>
+	<p>となっています<p>
+	<br>
+	<p>委員長を過去に経験したことがある。<p>
+		<%= f.label "はい" %>
+		<%= f.radio_button :question1, 1 %>
+		<%= f.label"いいえ" %>
+		<%= f.radio_button :question1, 0 %>	
+	<br>
+	<p>部活動、クラブ活動などでリーダーなどを務めたことがある。<p>
+                <%= f.label "はい" %>
+                <%= f.radio_button :question2, 1 %>
+                <%= f.label"いいえ" %>
+                <%= f.radio_button :question2, 0 %>
+        <br>
+	<p>発言するときははっきり物を言う方だ。<p>
+        <% 1.upto(5) do |c| %>
+                <%= f.label c %>
+                <%= f.radio_button :question3, c %>     
+        <% end %>
+        <br>
+	<p>話をまとめるのは得意な方である。<p>
+        <% 1.upto(5) do |d| %>
+                <%= f.label d %>
+                <%= f.radio_button :question4, d %>     
+        <% end %>
+        <br>
+	<p>人と平等に接することができる。<p>
+        <% 1.upto(5) do |e| %>
+                <%= f.label e %>
+                <%= f.radio_button :question5, e %>     
+        <% end %>
+        <br>
+	<p>自分でクラスをより良くしたいと思っている。<p>
+        <% 1.upto(5) do |w| %>
+                <%= f.label w %>
+                <%= f.radio_button :question6, w %>     
+        <% end %>
+        <br>
+	<p>集団行動が得意。<p>
+        <% 1.upto(5) do |g| %>
+                <%= f.label g %>
+                <%= f.radio_button :question7, g %>     
+        <% end %>
+        <br>
+	<p>ルールを守る方だ。<p>
+        <% 1.upto(5) do |h| %>
+                <%= f.label h %>
+                <%= f.radio_button :question8, h %>     
+        <% end %>
+        <br>
+	<p>良く真面目だと言われる。<p>
+        <% 1.upto(5) do |i| %>
+                <%= f.label i %>
+                <%= f.radio_button :question9, i %>     
+        <% end %>
+        <br>
+	<p>友達に注意ができる。<p>
+        <% 1.upto(5) do |j| %>
+                <%= f.label j %>
+                <%= f.radio_button :qustion10, j %>     
+        <% end %>
+        <br>
+	<%= f.submit "送信する" %>
+<% end %>
